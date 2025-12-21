@@ -26,6 +26,9 @@
                     <a href="index.html" class="navbar__link navbar__link--active">Inicio</a>
                 </li>
                 <li class="navbar__item">
+                    <a href="novedades.html" class="navbar__link">Novedades</a>
+                </li>
+                <li class="navbar__item">
                     <a href="actividades.html" class="navbar__link">Actividades</a>
                 </li>
                 <li class="navbar__item">
@@ -91,7 +94,7 @@ Esta asociación, que comezou paso a paso, foise consolidando ao longo dos anos 
         </section>
 
         <!-- Sección: Nuestros Valores -->
-        <section class="section section--values">
+        <!-- <section class="section section--values">
             <div class="container">
                 <h2 class="section__title">Os nosos valores</h2>
                 <div class="values">
@@ -124,6 +127,41 @@ Esta asociación, que comezou paso a paso, foise consolidando ao longo dos anos 
                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
                             incididunt ut labore et dolore magna aliqua.
                         </p>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Sección: Carrusel de Fotos -->
+        <section class="section section--carousel">
+            <div class="container">
+                <h2 class="section__title">Galería de Fotos</h2>
+                <div class="carousel" id="carousel">
+                    <div class="carousel__container">
+                        <div class="carousel__slide carousel__slide--active">
+                            <img src="assets/carrusell/img1.jpeg" alt="Foto 1 da asociación">
+                        </div>
+                        <div class="carousel__slide">
+                            <img src="assets/carrusell/img2.jpeg" alt="Foto 2 da asociación">
+                        </div>
+                        <div class="carousel__slide">
+                            <img src="assets/carrusell/img3.jpeg" alt="Foto 3 da asociación">
+                        </div>
+                    </div>
+
+                    <!-- Controles del carrusel -->
+                    <button class="carousel__btn carousel__btn--prev" id="carouselPrev" aria-label="Anterior">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel__btn carousel__btn--next" id="carouselNext" aria-label="Siguiente">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+
+                    <!-- Indicadores -->
+                    <div class="carousel__indicators">
+                        <button class="carousel__indicator carousel__indicator--active" data-slide="0" aria-label="Ir á foto 1"></button>
+                        <button class="carousel__indicator" data-slide="1" aria-label="Ir á foto 2"></button>
+                        <button class="carousel__indicator" data-slide="2" aria-label="Ir á foto 3"></button>
                     </div>
                 </div>
             </div>

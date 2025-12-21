@@ -167,6 +167,157 @@ function formatPhone(phone) {
 }
 
 // ==========================================
+// CARRUSEL DE FOTOS
+// ==========================================
+
+/**
+ * Inicialización del carrusel de imágenes
+ */
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.getElementById('carousel');
+
+    if (carousel) {
+        const slides = carousel.querySelectorAll('.carousel__slide');
+        const indicators = carousel.querySelectorAll('.carousel__indicator');
+        const prevBtn = document.getElementById('carouselPrev');
+        const nextBtn = document.getElementById('carouselNext');
+
+        let currentSlide = 0;
+        let autoPlayInterval;
+        const autoPlayDelay = 5000; // 5 segundos
+
+        /**
+         * Muestra el slide en el índice especificado
+         */
+        function showSlide(index) {
+            // Asegurar que el índice esté dentro del rango
+            if (index < 0) {
+                index = slides.length - 1;
+            } else if (index >= slides.length) {
+                index = 0;
+            }
+
+            // Ocultar todos los slides y desactivar indicadores
+            slides.forEach(slide => slide.classList.remove('carousel__slide--active'));
+            indicators.forEach(indicator => indicator.classList.remove('carousel__indicator--active'));
+
+            // Mostrar el slide actual y activar su indicador
+            slides[index].classList.add('carousel__slide--active');
+            indicators[index].classList.add('carousel__indicator--active');
+
+            currentSlide = index;
+        }
+
+        /**
+         * Avanza al siguiente slide
+         */
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        /**
+         * Retrocede al slide anterior
+         */
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        /**
+         * Inicia la reproducción automática
+         */
+        function startAutoPlay() {
+            autoPlayInterval = setInterval(nextSlide, autoPlayDelay);
+        }
+
+        /**
+         * Detiene la reproducción automática
+         */
+        function stopAutoPlay() {
+            clearInterval(autoPlayInterval);
+        }
+
+        /**
+         * Reinicia la reproducción automática
+         */
+        function resetAutoPlay() {
+            stopAutoPlay();
+            startAutoPlay();
+        }
+
+        // Event listeners para los botones
+        if (prevBtn) {
+            prevBtn.addEventListener('click', function() {
+                prevSlide();
+                resetAutoPlay();
+            });
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', function() {
+                nextSlide();
+                resetAutoPlay();
+            });
+        }
+
+        // Event listeners para los indicadores
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', function() {
+                showSlide(index);
+                resetAutoPlay();
+            });
+        });
+
+        // Pausar autoplay al pasar el ratón sobre el carrusel
+        carousel.addEventListener('mouseenter', stopAutoPlay);
+        carousel.addEventListener('mouseleave', startAutoPlay);
+
+        // Soporte para navegación con teclado
+        carousel.setAttribute('tabindex', '0');
+        carousel.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft') {
+                prevSlide();
+                resetAutoPlay();
+            } else if (e.key === 'ArrowRight') {
+                nextSlide();
+                resetAutoPlay();
+            }
+        });
+
+        // Soporte para gestos táctiles (swipe)
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        carousel.addEventListener('touchstart', function(e) {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        carousel.addEventListener('touchend', function(e) {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    // Swipe izquierda -> siguiente
+                    nextSlide();
+                } else {
+                    // Swipe derecha -> anterior
+                    prevSlide();
+                }
+                resetAutoPlay();
+            }
+        }
+
+        // Iniciar autoplay
+        startAutoPlay();
+    }
+});
+
+// ==========================================
 // CONSOLE LOG DE BIENVENIDA
 // ==========================================
 

@@ -23,13 +23,16 @@
             <!-- Links de navegación -->
             <ul class="navbar__menu" id="navbarMenu">
                 <li class="navbar__item">
-                    <a href="index.html" class="navbar__link navbar__link--active">Inicio</a>
+                    <a href="index.html" class="navbar__link">Inicio</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="novedades.html" class="navbar__link">Novedades</a>
                 </li>
                 <li class="navbar__item">
                     <a href="actividades.html" class="navbar__link">Actividades</a>
                 </li>
                 <li class="navbar__item">
-                    <a href="contacto.html" class="navbar__link">Contacto</a>
+                    <a href="contacto.html" class="navbar__link navbar__link--active">Contacto</a>
                 </li>
             </ul>
 
@@ -129,52 +132,29 @@
                     <!-- Formulario de contacto -->
                     <div class="contact__form-wrapper">
                         <h2 class="contact__subtitle">Envíanos unha Mensaxe</h2>
-                        <form class="contact__form" id="contactForm">
+
+                        <form name="contacto-asociacion" method="POST" data-netlify="true" class="contact__form" id="contactForm">
+
+                            <input type="hidden" name="form-name" value="contacto-asociacion" />
+
                             <div class="form__group">
                                 <label for="name" class="form__label">Nome completo</label>
-                                <input
-                                    type="text"
-                                    id="name"
-                                    name="name"
-                                    class="form__input"
-                                    placeholder="O teu nome"
-                                    required
-                                >
+                                <input type="text" id="name" name="name" class="form__input" placeholder="O teu nome" required>
                             </div>
 
                             <div class="form__group">
                                 <label for="email" class="form__label">Email</label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    class="form__input"
-                                    placeholder="oteucorreo@exemplo.com"
-                                    required
-                                >
+                                <input type="email" id="email" name="email" class="form__input" placeholder="oteucorreo@exemplo.com" required>
                             </div>
 
                             <div class="form__group">
                                 <label for="phone" class="form__label">Teléfono (opcional)</label>
-                                <input
-                                    type="tel"
-                                    id="phone"
-                                    name="phone"
-                                    class="form__input"
-                                    placeholder="+34 600 000 000"
-                                >
+                                <input type="tel" id="phone" name="phone" class="form__input" placeholder="+34 600 000 000">
                             </div>
 
                             <div class="form__group">
                                 <label for="message" class="form__label">Mensaxe</label>
-                                <textarea
-                                    id="message"
-                                    name="message"
-                                    class="form__textarea"
-                                    rows="5"
-                                    placeholder="Escribe a tua mensaxe aquí..."
-                                    required
-                                ></textarea>
+                                <textarea id="message" name="message" class="form__textarea" rows="5" placeholder="Escribe a tua mensaxe aquí..." required></textarea>
                             </div>
 
                             <button type="submit" class="form__button">
