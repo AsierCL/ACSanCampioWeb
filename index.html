@@ -1,32 +1,73 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="gl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Asociación Cultural - Espacio de cultura y tradición">
-    <title>Asociación Cultural - Inicio</title>
+
+    <title>Asociación Cultural San Campio | Cultura e Tradición en Vedra</title>
+    <meta name="description" content="Asociación Cultural San Campio (Vedra). Desde 1987 promovendo a cultura, o baile tradicional, a música e o folclore galego. Escola de música, A Requinta da Laxeira e moito máis.">
+    <meta name="keywords" content="Asociación Cultural San Campio, Vedra, baile tradicional, música galega, folclore, A Requinta da Laxeira, cultura galega, Sarandón, gaitas, pandeireta">
+    <meta name="author" content="AsierCL">
+    <meta name="robots" content="index, follow">
+
+    <meta name="language" content="gl">
+    <meta name="geo.region" content="ES-GA">
+    <meta name="geo.placename" content="Sarandón, Vedra">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Asociación Cultural San Campio - Cultura e Tradición">
+    <meta property="og:description" content="Espazo de cultura, tradición, baile e música en galego dende 1987. Coñece a nosa historia e actividades en Vedra.">
+    <meta property="og:image" content="assets/logo.webp"> <meta property="og:image:alt" content="Logo Asociación Cultural San Campio">
+    <meta property="og:locale" content="gl_ES">
+    <meta property="og:url" content="https://www.asociacionculturalsancampio.gal"> <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Asociación Cultural San Campio">
+    <meta name="twitter:description" content="Promovendo o folclore e a cultura galega dende 1987 en Vedra.">
+    <meta name="twitter:image" content="assets/logo.webp">
+
+    <link rel="icon" type="image/png" href="assets/logo.webp">
+    <link rel="canonical" href="https://www.asociacionculturalsancampio.gal" /> <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Font Awesome para iconos de redes sociales -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NGO",
+      "name": "Asociación Cultural San Campio",
+      "alternateName": "AC San Campio",
+      "url": "https://www.asociacionculturalsancampio.gal",
+      "logo": "assets/logo.webp",
+      "foundingDate": "1987-02",
+      "description": "Asociación dedicada ao estudo, investigación e práctica do folclore galego e a promoción de actividades culturais en Vedra.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Sarandón",
+        "addressRegion": "Vedra",
+        "addressCountry": "ES"
+      },
+      "sameAs": [
+        "https://www.facebook.com/p/AC-San-Campio-100067863977278/",
+        "https://www.instagram.com/a.c.sancampio"
+      ]
+    }
+    </script>
 </head>
+
 <body>
-    <!-- NAVBAR -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Menú principal">
         <div class="navbar__container">
-            <!-- Logo -->
             <div class="navbar__logo">
-                <a href="index.html">
-                    <img src="assets/logo.png" alt="Logo Asociación Cultural">
+                <a href="index.html" aria-label="Volver ao inicio">
+                    <img src="assets/logo.webp" alt="Logo Asociación Cultural San Campio" width="50" height="50">
                 </a>
             </div>
 
-            <!-- Links de navegación -->
             <ul class="navbar__menu" id="navbarMenu">
                 <li class="navbar__item">
-                    <a href="index.html" class="navbar__link navbar__link--active">Inicio</a>
+                    <a href="index.html" class="navbar__link navbar__link--active" aria-current="page">Inicio</a>
                 </li>
                 <li class="navbar__item">
-                    <a href="novedades.html" class="navbar__link">Novedades</a>
+                    <a href="novidades.html" class="navbar__link">Novidades</a>
                 </li>
                 <li class="navbar__item">
                     <a href="actividades.html" class="navbar__link">Actividades</a>
@@ -36,21 +77,16 @@
                 </li>
             </ul>
 
-            <!-- Redes sociales -->
             <div class="navbar__social">
-                <a href="https://www.facebook.com/p/AC-San-Campio-100067863977278/" target="_blank" aria-label="Facebook" class="navbar__social-link">
+                <a href="https://www.facebook.com/p/AC-San-Campio-100067863977278/" target="_blank" rel="noopener noreferrer" aria-label="Visitar Facebook" class="navbar__social-link">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="https://www.instagram.com/a.c.sancampio" target="_blank" aria-label="Instagram" class="navbar__social-link">
+                <a href="https://www.instagram.com/a.c.sancampio" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram" class="navbar__social-link">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <!-- <a href="https://youtube.com" target="_blank" aria-label="YouTube" class="navbar__social-link">
-                    <i class="fab fa-youtube"></i>
-                </a> -->
             </div>
 
-            <!-- Botón hamburguesa para móvil -->
-            <button class="navbar__toggle" id="navbarToggle" aria-label="Abrir menú">
+            <button class="navbar__toggle" id="navbarToggle" aria-label="Abrir menú de navegación" aria-expanded="false">
                 <span class="navbar__toggle-bar"></span>
                 <span class="navbar__toggle-bar"></span>
                 <span class="navbar__toggle-bar"></span>
@@ -58,8 +94,7 @@
         </div>
     </nav>
 
-    <!-- HERO HEADER -->
-    <header class="hero">
+    <header class="hero" role="banner">
         <div class="hero__overlay"></div>
         <div class="hero__content">
             <h1 class="hero__title">Asociación Cultural San Campio</h1>
@@ -67,97 +102,57 @@
         </div>
     </header>
 
-    <!-- MAIN CONTENT -->
     <main>
-        <!-- Sección: Presentación de la Asociación -->
         <section class="section section--presentation">
             <div class="container">
-                <h2 class="section__title">Benvidos a nosa Asociación</h2>
+                <h2 class="section__title">Benvidos á nosa Asociación</h2>
                 <div class="presentation">
                     <div class="presentation__text">
                         <p>
-                            En febreiro de 1987 fúndase a Asociación Cultural San Campio. Entre os seus obxectivos están o estudo, investigación e práctica do folclore galego; a realización e promoción de actividades culturais e recreativas nas diferentes formas e manifestacións, e a posta en valor da cultura galega en todos os seus ámbitos (patrimonio, lingua...)
-Esta asociación, que comezou paso a paso, foise consolidando ao longo dos anos como unha entidade responsable e digna que hoxe en día leva a cabo un amplo abano de actividades que pretenden sementar a nosa cultura.
+                            En febreiro de 1987 fúndase a <strong>Asociación Cultural San Campio</strong>. Entre os seus obxectivos están o estudo, investigación e práctica do folclore galego; a realización e promoción de actividades culturais e recreativas nas diferentes formas e manifestacións, e a posta en valor da cultura galega en todos os seus ámbitos (patrimonio, lingua...).
                         </p>
                         <p>
-                            Dende a súa fundación ata hoxe, a Asociación Cultural San Campio dedicouse fundamentalmente ao folclore (escola de música e baile tradicional), eido no que conseguiron varios logros, todos eles grazas ás diferentes directivas que a conformaron, aos socios/as, aos mestres/as, e ás persoas integrantes dos distintos grupos que traballaron decote para que a asociación chegara ben lonxe.
+                            Esta asociación, que comezou paso a paso, foise consolidando ao longo dos anos como unha entidade responsable e digna que hoxe en día leva a cabo un amplo abano de actividades que pretenden sementar a nosa cultura. Dende a súa fundación ata hoxe, a Asociación dedicouse fundamentalmente ao folclore (escola de música e baile tradicional), eido no que conseguiron varios logros grazas ás diferentes directivas, socios, mestres e integrantes.
+                        </p>
+                        <h3>Traxectoria e Recoñecementos</h3>
+                        <p>
+                            Dende a primeira actuación na oitava <em>Festa do Viño da Ulla</em> (1988), a asociación foi recoñecida con diferentes premios (Concurso Folclórico Rosalía de Castro, Día da muiñeira de Ames...) e participou en programas como <em>Luar</em> ou <em>Galicia Enteira</em>. Levou o noso folclore fóra de Galicia con intercambios en Portugal, Asturias ou Madrid.
                         </p>
                         <p>
-                            Dende a primeira actuación na oitava Festa do Viño da Ulla, o día 10 de abril de 1988 a asociación foi recoñecida con diferentes premios, (1º premio en banda de gaitas, 3º premio na categoría C de baile e 3º premio na categoría de A de pandereteiras no Concurso Folclórico organizado pola A.C. Rosalía de Castro de Padrón, 1º premio no Día da muiñeira de Ames…), e participou en diversos concursos, certames e festivais galegos de renome. Tamén actuou nos programas da T.V.G., Galicia Enteira e Luar. Levou fóra de Galicia o noso folclore; (intercambios culturais con grupos de Albacete, Murcia, Asturias, León, Portugal, participación na 1º Reunión Nacional de Grupos Rexionais celebrada en Madrid…). No 2004 nace “A Requinta da Laxeira”, grupo que neste percorrido realizou actuacións en diferentes festivais folk e festas de toda a comunidade galega, en Portugal, en Boas Aires en dúas ocasións, en Franfort (Alemaña), en Bilbao, Barcelona, Xixón, , Pamplona, Valencia, Sevilla, Salamanca…., tamén acadou o primeiro premio no concurso de Cantos de Taberna de Melide, participou nos programas da TVG, Luar, A Solaina, e no Alalá especial dedicado ao grupo entre outros. No seu percorrido editou tres discos “Vai de baranda”, “Maise” e “e Millore”.
+                            No 2004 nace <strong>“A Requinta da Laxeira”</strong>, grupo que realizou actuacións internacionais (Alemaña, Arxentina, Portugal) e editou tres discos: <em>“Vai de baranda”</em>, <em>“Maise”</em> e <em>“e Millore”</em>.
                         </p>
+                        <h3>Actividades</h3>
                         <p>
-                            Ao longo do tempo, esta asociación tamén organizou outras moitas actividades como: a Caravana Cultural, Concurso de Contos, disfraces polo Entroido, Festivais de Nadal, Campionato de Fútbol Sala no Nadal, Exposicións, Obradoiro de barro e pintura, Sendeirismo, Informática, Inglés, participación nas Xornadas arredor da Camelia, Excursións, Conferencias, Bailes de Salón, Marcha Cicloturista, Xogos, Magosto, Sardiñada de San Xoan, actuacións de Maxia, Concertos, obradoiros de Teatro e Costura, Cine, clases de guitarra, baile de salón, o Festival Folclórico da Ulla, campamentos de Nadal, o Espazo Activo da Ulla co Pasabodeghas… e algunha outra.
+                            Ao longo do tempo organizamos: Caravana Cultural, Entroido, Festivais de Nadal, Obradoiros, Sendeirismo, Magosto, Sardiñada de San Xoán, o Festival Folclórico da Ulla e o <strong>Espazo Activo da Ulla co Pasabodeghas</strong>, entre moitas outras iniciativas para todas as idades.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sección: Nuestros Valores -->
-        <!-- <section class="section section--values">
-            <div class="container">
-                <h2 class="section__title">Os nosos valores</h2>
-                <div class="values">
-                    <div class="value-card">
-                        <div class="value-card__icon">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <h3 class="value-card__title">AAAAA</h3>
-                        <p class="value-card__text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua.
-                        </p>
-                    </div>
-                    <div class="value-card">
-                        <div class="value-card__icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h3 class="value-card__title">BBBBB</h3>
-                        <p class="value-card__text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua.
-                        </p>
-                    </div>
-                    <div class="value-card">
-                        <div class="value-card__icon">
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h3 class="value-card__title">CCCCC</h3>
-                        <p class="value-card__text">
-                           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
-        <!-- Sección: Carrusel de Fotos -->
-        <section class="section section--carousel">
+        <section class="section section--carousel" aria-label="Galería de imaxes">
             <div class="container">
                 <h2 class="section__title">Galería de Fotos</h2>
                 <div class="carousel" id="carousel">
                     <div class="carousel__container">
                         <div class="carousel__slide carousel__slide--active">
-                            <img src="assets/carrusell/img1.jpeg" alt="Foto 1 da asociación">
+                            <img src="assets/carrusell/img1.webp" alt="Actuación de baile tradicional da AC San Campio" width="800" height="600">
                         </div>
                         <div class="carousel__slide">
-                            <img src="assets/carrusell/img2.jpeg" alt="Foto 2 da asociación">
+                            <img src="assets/carrusell/img2.webp" alt="Grupo de música tradicional e gaitas" loading="lazy" width="800" height="600">
                         </div>
                         <div class="carousel__slide">
-                            <img src="assets/carrusell/img3.jpeg" alt="Foto 3 da asociación">
+                            <img src="assets/carrusell/img3.webp" alt="Actividades culturais e obradoiros" loading="lazy" width="800" height="600">
                         </div>
                     </div>
 
-                    <!-- Controles del carrusel -->
-                    <button class="carousel__btn carousel__btn--prev" id="carouselPrev" aria-label="Anterior">
+                    <button class="carousel__btn carousel__btn--prev" id="carouselPrev" aria-label="Ver foto anterior">
                         <i class="fas fa-chevron-left"></i>
                     </button>
-                    <button class="carousel__btn carousel__btn--next" id="carouselNext" aria-label="Siguiente">
+                    <button class="carousel__btn carousel__btn--next" id="carouselNext" aria-label="Ver foto seguinte">
                         <i class="fas fa-chevron-right"></i>
                     </button>
 
-                    <!-- Indicadores -->
                     <div class="carousel__indicators">
                         <button class="carousel__indicator carousel__indicator--active" data-slide="0" aria-label="Ir á foto 1"></button>
                         <button class="carousel__indicator" data-slide="1" aria-label="Ir á foto 2"></button>
@@ -168,15 +163,14 @@ Esta asociación, que comezou paso a paso, foise consolidando ao longo dos anos 
         </section>
     </main>
 
-    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer__container">
             <div class="footer__logo">
-                <img src="assets/logo.png" alt="Logo Asociación Cultural">
+                <img src="assets/logo.webp" alt="Logo Asociación Cultural San Campio" loading="lazy">
             </div>
             <div class="footer__info">
                 <p class="footer__copyright">
-                    &copy; 2025 Asociación Cultural San Campio. Todos os dereitos reservados.
+                    © 2025 Asociación Cultural San Campio. Todos os dereitos reservados.
                 </p>
                 <p class="footer__dev">
                     Dev by <strong>AsierCL</strong>
@@ -185,7 +179,6 @@ Esta asociación, que comezou paso a paso, foise consolidando ao longo dos anos 
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>
